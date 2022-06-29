@@ -147,7 +147,7 @@ a {
 .header__navbar>li a {
     text-decoration: none;
     line-height: 60px;
-    padding: 0 14px;
+    padding: 0 12px;
     display: inline-block;
     font-size: 19px;
     text-transform: capitalize;

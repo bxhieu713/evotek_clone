@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href=""><img src="https://evotek.vn/wp-content/uploads/2020/05/logo-evotek-web-300x99.png"
+              alt="header-logo" /></a>
+        </div>
+        <ul class="header__navbar">
+          <li><a href="">Trang Chủ</a></li>
+          <li><a href="">Sản Phẩm</a></li>
+          <li><a href="">Giới Thiệu</a></li>
+          <li>
+            <a href="">
+              Tin Tức
+              <i class="nav-caret fas fa-caret-down"></i>
+            </a>
+            <ul class="news__subnav subnav">
+              <li><a href="">Hoạt động nội bộ</a></li>
+              <li><a href="">Phát triển phần mềm</a></li>
+              <li><a href="">Tin tức trong ngành</a></li>
+            </ul>
+          </li>
+          <li><a href="">Tuyển Dụng</a></li>
+          <li><a href="">Liên Hệ</a></li>
+          <li>
+            <a href="">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFsSURBVHjaYvzPgAD/UNlYEUAAmuTYAAAQhAEYqF/zFbe50RZ1cMmS9TLi0pJLRjZohAMTGFUN9HdnHgEE1sDw//+Tp0ClINW/f4NI9d////3+f+b3/1+////+9f/XL6A4o6ws0AaAAGIBm/0fRTVQ2v3Pf97f/4/9Aqv+DdHA8Ps3UANAALEAMSNQNdDGP3+ALvnf8vv/t9//9X/////7f+uv/4K//iciNABNBwggsJP+/IW4kuH3n//1v/8v+wVSDURmv/57//7/CeokoKFA0wECiAnkpL9/wH4CO+DNr/+VQA1A9PN/w6//j36CVIMRxEkAAQR20m+QpSBXgU0CuSTj9/93v/8v//V/xW+48UBD/zAwAAQQSAMzOMiABoBUswCd8ev/M7A669//OX7///Lr/x+gBlCoAJ0DEEAgDUy//zBISoKNAfoepJNRFmQkyJecfxj4/kDCEIiAigECiPErakTiiWMIAAgwAB4ZUlqMMhQQAAAAAElFTkSuQmCC"
+                alt="" />
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="lang__subnav subnav">
+              <li>
+                <a href=""><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFsSURBVHjaYvzPgAD/UNlYEUAAmuTYAAAQhAEYqF/zFbe50RZ1cMmS9TLi0pJLRjZohAMTGFUN9HdnHgEE1sDw//+Tp0ClINW/f4NI9d////3+f+b3/1+////+9f/XL6A4o6ws0AaAAGIBm/0fRTVQ2v3Pf97f/4/9Aqv+DdHA8Ps3UANAALEAMSNQNdDGP3+ALvnf8vv/t9//9X/////7f+uv/4K//iciNABNBwggsJP+/IW4kuH3n//1v/8v+wVSDURmv/57//7/CeokoKFA0wECiAnkpL9/wH4CO+DNr/+VQA1A9PN/w6//j36CVIMRxEkAAQR20m+QpSBXgU0CuSTj9/93v/8v//V/xW+48UBD/zAwAAQQSAMzOMiABoBUswCd8ev/M7A669//OX7///Lr/x+gBlCoAJ0DEEAgDUy//zBISoKNAfoepJNRFmQkyJecfxj4/kDCEIiAigECiPErakTiiWMIAAgwAB4ZUlqMMhQQAAAAAElFTkSuQmCC"
+                    alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC"
+                    alt="" /></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrapper" id="about">
+        <div class="about__content">
+          <h2 class="fs-25">Công ty cổ phần Công nghệ EVOTEK Việt Nam</h2>
+          <p class="fs-15">
+            Công ty Cổ phần Công nghệ EVOTEK Việt Nam được ra đời vào ngày 15
+            tháng 8 năm 2018 với sứ mệnh cung cấp các giải pháp công nghệ phần
+            mềm thông minh cho các Doanh nghiệp, tập đoàn, các đơn vị công…
+            đồng thời cung cấp các giải pháp kết nối cộng đồng trên internet,
+            các hệ thống website, dịch vụ liên quan đến website, các hệ thống
+            trong lĩnh vực thương mại điện tử, chính phủ điện tử.
+          </p>
+        </div>
+        <div class="about__map">
+          <a href="" rel="bookmark">
+            <img height="400" src="https://evotek.vn/wp-content/uploads/2020/05/hanoi-animation.gif" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="wrapper" id="intro">
+        <div class="intro__text">
+          <h2>
+            Evotek thiết kế, xây dựng, phát triển các ứng dụng Mobile và Web
+            sử dụng công nghệ tiên tiến nhất
+          </h2>
+        </div>
+        <div class="intro__img">
+          <a href="https://topdevelopers.biz/topdeveloper/top-custom-software-development-companies/">
+            <img
+              src="https://cdn.shortpixel.ai/spai/w_151+q_lossy+ret_img+to_webp/https://topdevelopers.biz/wp-content/uploads/2020/01/Top-Custom-Software.png"
+              alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="wrapper" id="company">
+        <div class="company__slogan">
+          <h1 class="fs-30">Evotek chú trọng đến trải nghiệm người dùng</h1>
+          <p class="fs-18">
+            Đội ngũ nhân viên luôn lắng nghe, thấu hiểu khách hàng.
+          </p>
+        </div>
+
+        <div class="company__projects">
+          <div class="project-1 project">
+            <div class="project-content">
+              <div class="project__name fs-15">Sinvoice</div>
+              <div class="project__title fs-25">
+                Giải pháp hóa đơn điện tử thông minh (Top 3 Việt Nam)
+              </div>
+              <div class="project__description fs-18">
+                Hệ thống hóa đơn điện tử là một giải pháp phần mềm toàn diện
+                được phát triển cho các tổ chức và cá nhân sử dụng hóa đơn
+                điện tử khi mua, bán hàng hóa hoặc cung cấp dịch vụ.
+              </div>
+              <a href="" class="more">Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="project-img">
+              <a href="">
+                <img src="https://evotek.vn/wp-content/uploads/2020/05/sinvoice-profile-1.png" alt="" height="350" />
+              </a>
+            </div>
+          </div>
+          <div class="project-23">
+            <div class="project-2 project">
+              <a href="">
+                <img src="https://evotek.vn/wp-content/uploads/2020/05/simalo-profile.png" alt="" height="350" />
+              </a>
+              <div class="project__name fs-15">Hệ thống V-Tracking</div>
+              <div class="project__title fs-25">
+                Giải pháp giám sát và quản lý xe
+              </div>
+
+              <a href="" class="more">Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="project-2 project">
+              <a href="">
+                <img src="https://evotek.vn/wp-content/uploads/2020/05/v-tracking-profile.png" alt="" height="350" />
+              </a>
+              <div class="project__name fs-15">Hệ thống quản lý kho SIM</div>
+              <div class="project__title fs-25">Chọn số SIM bạn muốn</div>
+
+              <a href="" class="more">Xem thêm
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="company__btn">
+          <a href="">Xem thêm
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="wrapper blog" id="blog1">
+        <div class="blog__slogan">
+          <h1 class="fs-30">Hãy để chúng tôi tạo ra ứng dụng cho bạn</h1>
+          <p class="fs-18">Thiết kế và xây dựng ứng dụng di động, website</p>
+        </div>
+        <a href="" class="more">Liên hệ
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="blog__wrapper">
+          <div class="blog__service">
+            <h2 class="fs-17">Dịch vụ</h2>
+            <ul>
+              <li>
+                <span>Xác định MVP</span>
+              </li>
+              <li>
+                <span>Nghiên cứu thị trường</span>
+              </li>
+              <li>
+                <span>Thiết kế kiến trúc phần mềm</span>
+              </li>
+              <li>
+                <span>Tư vấn UI/UX</span>
+              </li>
+            </ul>
+          </div>
+          <div class="blog__project">
+            <h2 class="fs-17">Dự án</h2>
+            <div class="blog__project--content">
+              <a href="">
+                <img src="https://evotek.vn/wp-content/uploads/2020/05/v-tracking-profile.png" alt="" height="200" />
+              </a>
+              <div>
+                <div class="project__name">Hệ thống V-Tracking
+                </div>
+                <div class="project__title">
+                  Hệ thống giám sát và quản lý xe
+
+                </div>
+                <a href="" class="more">Xem thêm
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper blog" id="blog2">
+        <div class="blog__slogan">
+          <h1 class="fs-30">Evotek giúp bạn phát triển lớn mạnh</h1>
+          <p class="fs-18">
+            Thiết kế và phát triển phần mềm đáp ứng những yêu cầu khắt khe của
+            khách hàng, tạo tiền đề cho sự mở rộng phát triển của đối tác.
+          </p>
+        </div>
+        <a href="" class="more">Liên hệ
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="blog__wrapper">
+          <div class="blog__service">
+            <h2 class="fs-17">Dịch vụ</h2>
+            <ul>
+              <li>
+                <span>Xác định MVP</span>
+              </li>
+              <li>
+                <span>Nghiên cứu thị trường</span>
+              </li>
+              <li>
+                <span>Thiết kế kiến trúc phần mềm</span>
+              </li>
+              <li>
+                <span>Tư vấn UI/UX</span>
+              </li>
+            </ul>
+          </div>
+          <div class="blog__project">
+            <h2 class="fs-17">Dự án</h2>
+            <div class="blog__project--content">
+              <a href="">
+                <img src="https://evotek.vn/wp-content/uploads/2020/05/simalo-profile.png" alt="" height="200" />
+              </a>
+              <div>
+                <div class="project__name">Messup</div>
+                <div class="project__title">
+                  Messup là công cụ đưa các ý tưởng của bạn vào cuộc sống thực
+                  tế
+                </div>
+                <a href="" class="more">Xem thêm
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper" id="contact">
+        <h1>Hãy liên hệ với chúng tôi để được hỗ trợ</h1>
+        <a href="" class="more">Liên hệ
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="wrapper" id="partner">
+        <div class="partner__slogan">
+          <h1 class="fs-30">Đối tác</h1>
+          <p>
+            Hãy trở thành đối tác của chúng tôi, cùng nhau hợp tác hướng tới
+            một tương lai tốt đẹp hơn.
+          </p>
+        </div>
+        <div class="partner__img">
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/fpt-software-logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/Logo-Viettel-Moi-PNG.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/The_Metfone_Logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/The_Mytel_Logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/vietcom-bank-logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/tp-bank-logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/vingroup-logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/Logo_Vintech-20190724T075939454489.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/logo-3.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/vsm_logo.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/logo-hms-1598944621101.png" alt="" />
+          </a>
+          <a href="">
+            <img src="https://evotek.vn/wp-content/uploads/2021/03/logo-2-1.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="wrapper" id="news">
+        <h1>Tin tức</h1>
+        <div class="news__content">
+          <div class="new">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/question-guy.jpg" width="130" alt="" />
+            <div class="new__text">
+              <a href="">Làm thế nào để chọn một công ty phát triển phần mềm?</a>
+
+              <p>
+                Làm thế nào để chọn đúng một công ty phát triển phần mềm? Khi
+                lựa chọn một công ty phát
+              </p>
+            </div>
+          </div>
+          <div class="new">
+            <img src="https://evotek.vn/wp-content/uploads/2020/05/Facebook-Company-Profile-Image-360x360-1.png"
+              width="130" alt="" />
+            <div class="new__text">
+              <a href="">Evotek</a>
+
+              <p>
+                Công ty cổ phần Evotek là một công ty phát triển phần mềm tại Hà Nội, Việt Nam. Evotek tập trung
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="" class="more">Xem thêm
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-info wrapper">
+        <div class="info-address">
+          <h1>Đăng ký để nhận bản tin</h1>
+          <p>
+            Address: 7th Floor, Hoang Ngoc Building, No. 4 Lane 82, Dich Vong
+            Hau Street, Cau Giay, Hanoi
+          </p>
+          <div class="info-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.9714370711276!2d105.78377245021632!3d21.07380299154674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aacdb092a699%3A0x4b3eda167c4e381f!2zMjI3IFBo4bqhbSBWxINuIMSQ4buTbmcsIFh1w6JuIMSQ4buJbmgsIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1656398578099!5m2!1svi!2s"
+              width="350" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="info-menu">
+          <ul>
+            <li><a href="">Dự án</a></li>
+            <li><a href="">Chuyên môn</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <div class="space"></div>
+            <li><a href="">Liên hệ</a></li>
+            <li><a href="">Văn hoá công ty</a></li>
+            <div class="space"></div>
+
+          </ul>
+          <div class="social-list">
+            <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright wrapper">
+        <a href="">
+          <img src="https://evotek.vn/wp-content/uploads/2020/05/evotek-logo-white.png" width="205" alt="" />
+        </a>
+
+        <div class="lang">
+          <select id="lang" name="lang">
+            <option value="Tiếng Việt">Tiếng Việt</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+
+        <h4>2020 @ Evotek</h6>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onscroll = function () {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector(".header").style.top = "-30px";
+        document.querySelector(".header__logo img").style.width = "127px";
+        document.querySelector(".header__logo img").style.marginTop = "30px";
+
+      } else {
+        document.querySelector(".header").style.top = "0px";
+        document.querySelector(".header__logo img").style.marginTop = "0px";
+
+        document.querySelector(".header__logo img").style.width = "284px";
+
+      }
+    }
+  </script>
+
+</body>
+
+</html>
